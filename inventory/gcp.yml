@@ -1,0 +1,47 @@
+---
+all:
+ vars:
+
+  # GKE cluster variables
+  gcp_project: avid-bricolage-405015              # ID of GCP Project
+  gcp_auth_kind: serviceaccount            # Do not change
+  gcp_cred_file: avid-bricolage-405015-f33b5639620f.json    # Path to service account keys (json file downloaded from GCP)
+
+  gcp_namespace: default
+  gcp_zone: us-central1-a
+  gcp_region: us-central1
+  gcp_image_type: ubuntu_containerd
+  gcp_machine_type: e2-medium          # Can be changed if necessary
+  gcp_disk_size_gb: 50                 # Can be changed if necessary
+  gcp_initial_node_count: 3            # Number of nodes to create. Can be changed if necessary
+
+
+  # APP variables
+  app_ip: "34.69.107.196"
+  app_port: "80"
+
+
+  # DB variables
+  db_name: "lavarel"
+  db_user: "user"
+  db_pvc: "mysql-pvc"
+  db_empty_password: "true"
+  db_pass: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          38393164636332323239646438386536616466653865323265626232636266316662303234663230
+          6332646233333438663730353630383537366336346566340a633335376137306665393533366136
+          62396332643766633531393936356261646633303139373333613062376333633538326133386365
+          6532303666323633610a643264356662336633303961306537643933303139346662316339666333
+          6434
+  # Additional variables
+  seed_database: "true"
+  delete_data: "true"
+
+
+  # Test variables
+  jmeter_path: "../apache-jmeter-5.5/bin/jmeter"
+  n_users: 600
+  test_duration: 300
+  test_delay: 333 
+  test_ramp_time: 60
+  

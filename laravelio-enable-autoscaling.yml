@@ -1,0 +1,6 @@
+# Playbook to scale horizontaly laravel.io pods
+- name: Enable laravel.io horizontal pod autoscaling
+  hosts: localhost
+  gather_facts: false
+  roles:
+      - laravelio/HPautoscale/enable

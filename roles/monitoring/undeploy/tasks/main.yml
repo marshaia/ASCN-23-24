@@ -1,0 +1,2 @@
+- name: Delete dashboard if it exists
+  shell: gcloud monitoring dashboards delete "projects/{{gcp_project}}/dashboards/laravelio_monitoring" --project='{{gcp_project}}' --quiet

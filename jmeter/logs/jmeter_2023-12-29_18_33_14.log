@@ -1,0 +1,94 @@
+2023-12-29 18:33:15,942 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2023-12-29 18:33:15,975 INFO o.a.j.JMeter: Loading user properties from: /home/luffy-55/Documents/mei1/ASCN/apache-jmeter-5.6.2/bin/user.properties
+2023-12-29 18:33:15,976 INFO o.a.j.JMeter: Loading system properties from: /home/luffy-55/Documents/mei1/ASCN/apache-jmeter-5.6.2/bin/system.properties
+2023-12-29 18:33:15,985 INFO o.a.j.JMeter: Copyright (c) 1998-2023 The Apache Software Foundation
+2023-12-29 18:33:15,986 INFO o.a.j.JMeter: Version 5.6.2
+2023-12-29 18:33:15,986 INFO o.a.j.JMeter: java.version=17.0.7
+2023-12-29 18:33:15,986 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2023-12-29 18:33:15,986 INFO o.a.j.JMeter: os.name=Linux
+2023-12-29 18:33:15,986 INFO o.a.j.JMeter: os.arch=amd64
+2023-12-29 18:33:15,986 INFO o.a.j.JMeter: os.version=6.3.8-100.fc37.x86_64
+2023-12-29 18:33:15,987 INFO o.a.j.JMeter: file.encoding=UTF-8
+2023-12-29 18:33:15,987 INFO o.a.j.JMeter: java.awt.headless=true
+2023-12-29 18:33:15,987 INFO o.a.j.JMeter: Max memory     =1073741824
+2023-12-29 18:33:15,987 INFO o.a.j.JMeter: Available Processors =8
+2023-12-29 18:33:15,999 INFO o.a.j.JMeter: Default Locale=English (EN)
+2023-12-29 18:33:15,999 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2023-12-29 18:33:16,000 INFO o.a.j.JMeter: JMeterHome=/home/luffy-55/Documents/mei1/ASCN/apache-jmeter-5.6.2
+2023-12-29 18:33:16,000 INFO o.a.j.JMeter: user.dir  =/home/luffy-55/Documents/mei1/ASCN/GrupoTP-12
+2023-12-29 18:33:16,000 INFO o.a.j.JMeter: PWD       =/home/luffy-55/Documents/mei1/ASCN/GrupoTP-12
+2023-12-29 18:33:16,001 INFO o.a.j.JMeter: IP: 192.168.2.150 Name: fedora36 FullName: fedora36
+2023-12-29 18:33:16,021 INFO o.a.j.s.FileServer: Default base='/home/luffy-55/Documents/mei1/ASCN/GrupoTP-12'
+2023-12-29 18:33:16,023 INFO o.a.j.s.FileServer: Set new base='/home/luffy-55/Documents/mei1/ASCN/GrupoTP-12/jmeter'
+2023-12-29 18:33:16,326 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2023-12-29 18:33:16,367 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2023-12-29 18:33:16,371 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2023-12-29 18:33:16,375 INFO o.a.j.s.SaveService: Loading file: jmeter/jmeter.jmx
+2023-12-29 18:33:16,443 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-12-29 18:33:16,443 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-12-29 18:33:16,444 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-12-29 18:33:16,444 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-12-29 18:33:16,444 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2023-12-29 18:33:16,444 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2023-12-29 18:33:16,475 INFO o.a.j.JMeter: Creating summariser <summary>
+2023-12-29 18:33:16,491 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-12-29 18:33:16,492 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-12-29 18:33:16,492 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-12-29 18:33:16,497 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2023-12-29 18:33:16,498 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2023-12-29 18:33:16,579 INFO o.a.j.JMeter: Running test (1703874796578)
+2023-12-29 18:33:16,600 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2023-12-29 18:33:16,600 INFO o.a.j.e.StandardJMeterEngine: Starting 10 threads for group Thread Group.
+2023-12-29 18:33:16,600 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-12-29 18:33:16,600 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=10 ramp-up=30 delayedStart=false
+2023-12-29 18:33:16,608 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2023-12-29 18:33:16,613 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-12-29 18:33:16,613 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-12-29 18:33:16,987 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = fedora36
+2023-12-29 18:33:17,007 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2023-12-29 18:33:17,015 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2023-12-29 18:33:17,015 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2023-12-29 18:33:17,016 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2023-12-29 18:33:17,016 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2023-12-29 18:33:19,604 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-2
+2023-12-29 18:33:22,602 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-3
+2023-12-29 18:33:25,603 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-4
+2023-12-29 18:33:28,601 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-5
+2023-12-29 18:33:30,342 INFO o.a.j.r.Summariser: summary +     20 in 00:00:14 =    1.5/s Avg:  1352 Min:  1046 Max:  1942 Err:     0 (0.00%) Active: 5 Started: 5 Finished: 0
+2023-12-29 18:33:31,601 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-6
+2023-12-29 18:33:34,601 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-7
+2023-12-29 18:33:37,601 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-8
+2023-12-29 18:33:40,601 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-9
+2023-12-29 18:33:43,601 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-10
+2023-12-29 18:34:00,283 INFO o.a.j.r.Summariser: summary +     61 in 00:00:30 =    2.0/s Avg:  3674 Min:  1925 Max:  4652 Err:     0 (0.00%) Active: 10 Started: 10 Finished: 0
+2023-12-29 18:34:00,285 INFO o.a.j.r.Summariser: summary =     81 in 00:00:44 =    1.9/s Avg:  3101 Min:  1046 Max:  4652 Err:     0 (0.00%)
+2023-12-29 18:34:30,179 INFO o.a.j.r.Summariser: summary +     61 in 00:00:30 =    2.0/s Avg:  4596 Min:  4418 Max:  4922 Err:     0 (0.00%) Active: 10 Started: 10 Finished: 0
+2023-12-29 18:34:30,181 INFO o.a.j.r.Summariser: summary =    142 in 00:01:14 =    1.9/s Avg:  3743 Min:  1046 Max:  4922 Err:     0 (0.00%)
+2023-12-29 18:35:00,053 INFO o.a.j.r.Summariser: summary +     61 in 00:00:30 =    2.0/s Avg:  4552 Min:  4363 Max:  5000 Err:     0 (0.00%) Active: 10 Started: 10 Finished: 0
+2023-12-29 18:35:00,055 INFO o.a.j.r.Summariser: summary =    203 in 00:01:43 =    2.0/s Avg:  3986 Min:  1046 Max:  5000 Err:     0 (0.00%)
+2023-12-29 18:35:30,293 INFO o.a.j.r.Summariser: summary +     62 in 00:00:30 =    2.1/s Avg:  4552 Min:  4417 Max:  4724 Err:     0 (0.00%) Active: 10 Started: 10 Finished: 0
+2023-12-29 18:35:30,293 INFO o.a.j.r.Summariser: summary =    265 in 00:02:14 =    2.0/s Avg:  4119 Min:  1046 Max:  5000 Err:     0 (0.00%)
+2023-12-29 18:36:00,119 INFO o.a.j.r.Summariser: summary +     61 in 00:00:30 =    2.0/s Avg:  4553 Min:  4411 Max:  4764 Err:     0 (0.00%) Active: 10 Started: 10 Finished: 0
+2023-12-29 18:36:00,121 INFO o.a.j.r.Summariser: summary =    326 in 00:02:44 =    2.0/s Avg:  4200 Min:  1046 Max:  5000 Err:     0 (0.00%)
+2023-12-29 18:36:16,486 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-9
+2023-12-29 18:36:16,965 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Thread Group 1-6
+2023-12-29 18:36:16,966 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-6
+2023-12-29 18:36:17,446 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Thread Group 1-8
+2023-12-29 18:36:17,447 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-8
+2023-12-29 18:36:17,943 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Thread Group 1-7
+2023-12-29 18:36:17,944 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-7
+2023-12-29 18:36:18,410 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Thread Group 1-4
+2023-12-29 18:36:18,410 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-4
+2023-12-29 18:36:18,901 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Thread Group 1-3
+2023-12-29 18:36:18,902 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-3
+2023-12-29 18:36:19,424 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Thread Group 1-1
+2023-12-29 18:36:19,425 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2023-12-29 18:36:19,898 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Thread Group 1-10
+2023-12-29 18:36:19,899 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-10
+2023-12-29 18:36:20,390 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Thread Group 1-5
+2023-12-29 18:36:20,390 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-5
+2023-12-29 18:36:20,885 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Thread Group 1-2
+2023-12-29 18:36:20,886 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-2
+2023-12-29 18:36:20,887 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-12-29 18:36:20,888 INFO o.a.j.r.Summariser: summary +     42 in 00:00:21 =    2.0/s Avg:  4602 Min:  4481 Max:  4798 Err:     0 (0.00%) Active: 0 Started: 10 Finished: 10
+2023-12-29 18:36:20,888 INFO o.a.j.r.Summariser: summary =    368 in 00:03:04 =    2.0/s Avg:  4246 Min:  1046 Max:  5000 Err:     0 (0.00%)

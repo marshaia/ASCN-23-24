@@ -1,0 +1,16 @@
+---
+- name: Undeploy Laravel
+  kubernetes.core.k8s:
+    state: absent
+    api_version: apps/v1
+    kind: Deployment
+    namespace: "{{ gcp_namespace }}"
+    name: laravel-deployment
+
+- name: Undeploy Laravel service
+  kubernetes.core.k8s:
+    state: absent
+    api_version: v1
+    kind: Service
+    namespace: "{{ gcp_namespace }}"
+    name: laravel-service

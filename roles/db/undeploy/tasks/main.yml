@@ -1,0 +1,25 @@
+---
+- name: Undeploy database deployment
+  kubernetes.core.k8s:
+    state: absent
+    api_version: apps/v1
+    kind: Deployment
+    namespace: "{{ gcp_namespace }}"
+    name: mysql-deployment
+
+- name: Undeploy dabatase pvc
+  when: "{{ delete_data }}"
+  kubernetes.core.k8s:
+    state: absent
+    api_version: v1
+    kind: PersistentVolumeClaim
+    name: "{{ db_pvc }}"
+    namespace: "{{ gcp_namespace }}"
+
+- name: Undeploy database service
+  kubernetes.core.k8s:
+    state: absent
+    api_version: v1
+    kind: Service
+    name: mysql-service
+    namespace: "{{ gcp_namespace }}"

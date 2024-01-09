@@ -1,0 +1,23 @@
+---
+- name: Create k8s namespace
+  kubernetes.core.k8s:
+    state: present
+    definition:
+      apiVersion: v1
+      kind: namespace
+      metadata:
+        name: "{{ gcp_namespace }}"
+
+- name: Change Namespace config
+  shell: kubectl config set-context --current --namespace="{{ gcp_namespace }}"
+
+- name: Create Password Secret
+  kubernetes.core.k8s:
+    state: present
+    template: secrets.yml
+
+
+- name: Create ConfigMap Secret
+  kubernetes.core.k8s:
+    state: present
+    template: config.yml

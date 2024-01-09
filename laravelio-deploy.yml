@@ -1,0 +1,10 @@
+---
+# Playbook to deploy laravel.io and its components
+- name: Deploy laravel.io and its components
+  hosts: localhost
+  gather_facts: false
+  roles:
+      - k8s_cluster_configs/create
+      - db/setup
+      - laravelio/setup
+      - monitoring/deploy

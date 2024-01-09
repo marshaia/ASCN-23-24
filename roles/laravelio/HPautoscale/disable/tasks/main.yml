@@ -1,0 +1,4 @@
+---
+- name: Delete Laravel HPA
+  shell: kubectl delete hpa laravel-autoscale
+    

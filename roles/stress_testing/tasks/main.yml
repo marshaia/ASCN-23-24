@@ -1,0 +1,8 @@
+- name: Create jmeter config file
+  template:
+    src: jmeter.jmx
+    dest: jmeter/jmeter.jmx
+
+
+- name: Jmeter testing
+  shell: "./{{jmeter_path}} -n -X -t jmeter/jmeter.jmx -j jmeter/logs/jmeter_{{ '%Y-%m-%d_%H:%M:%S' | strftime }}.log"

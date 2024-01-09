@@ -1,0 +1,52 @@
+---
+# Deployment for Laravel
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: laravel-deployment
+  namespace: "{{ gcp_namespace }}"
+  labels:
+    app: laravel
+    tier: app
+spec:
+  selector:
+    matchLabels:
+      app: laravel
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: laravel
+        tier: app
+    spec:
+      containers:
+      - name: laravel
+        image: persa053/laravel
+        env:
+        - name: DB_HOST
+          value: mysql-service
+        # To seed or not to seed
+        - name: SEED
+          value: "{{ seed_database }}"
+        - name: DB_DATABASE
+          valueFrom:
+            configMapKeyRef:
+              name: config
+              key: database_name
+        - name: DB_USERNAME
+          valueFrom:
+            configMapKeyRef:
+              name: config
+              key: database_user
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-pass
+              key: pass
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            cpu: "300m"
+            memory: "400Mi"

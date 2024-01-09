@@ -1,0 +1,10 @@
+---
+# Playbook to undeploy laravel.io and its component
+- name: Deploy laravel.io and its components
+  hosts: localhost
+  gather_facts: false
+  roles:
+      - k8s_cluster_configs/delete
+      - db/undeploy
+      - laravelio/undeploy
+      - monitoring/undeploy

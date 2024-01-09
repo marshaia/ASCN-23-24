@@ -1,0 +1,6 @@
+---
+- name: Stress test with jmeter
+  hosts: localhost
+  gather_facts: false
+  roles:
+      - stress_testing

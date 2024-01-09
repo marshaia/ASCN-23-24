@@ -1,0 +1,18 @@
+---
+# Service for exposing MySQL
+apiVersion: v1
+kind: Service
+metadata:
+  name: laravel-service # logical name of the service, which will also become the DNS name of the service when it is created.
+  namespace: "{{ gcp_namespace }}"
+  labels:
+    app: laravel
+    tier: app
+spec:
+  type: LoadBalancer
+  selector:
+    app: laravel
+  ports:
+    - protocol: TCP
+      targetPort: 8000 # port that containers are listening on
+      port: 80 # port exposed internally in the cluster

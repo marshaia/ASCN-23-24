@@ -1,0 +1,61 @@
+---
+- name: Laravel deployment
+  kubernetes.core.k8s:
+    state: present
+    template: laravel-deployment.yml
+
+- name: Laravel service
+  kubernetes.core.k8s:
+    state: present
+    template: laravel-service.yml
+
+- name: Get laravel ip
+  shell: kubectl get services -l app=laravel -o jsonpath='{.items[0].status.loadBalancer.ingress[0].ip}'
+  register: external_ip
+  until: external_ip.stdout.0 is defined
+  delay: 60
+  retries: 10
+
+- name: Set app_ip variable
+  set_fact:
+    app_ip: "{{ external_ip.stdout_lines[0] }}"
+
+- name: Get external port
+  shell: kubectl get services -l app=laravel -o jsonpath='{.items[0].spec.ports[0].port}'
+  register: port
+  until: port.stdout_lines.0 is defined
+  delay: 60
+  retries: 7
+
+- name: Set app_port
+  set_fact:
+    app_port: "{{ port.stdout_lines[0] }}"
+
+# Probably an approach naive af, but try with "sed" maybe ?
+# - name: Update inventory
+#   template:
+#     src: gcp.yml
+#     dest: inventory/gcp.yml
+
+# and i thought using templates was a naive approach :,)
+# must be a way of using this in the right way 
+- name: Update ip in inventory
+  lineinfile:
+    path: inventory/gcp.yml
+    regexp: '  app_ip: '
+    line: '  app_ip: "{{ app_ip }}"'
+
+- name: Update port in inventory
+  lineinfile:
+    path: inventory/gcp.yml
+    regexp: '  app_port: '
+    line: '  app_port: "{{ app_port }}"'
+
+
+- name: Get Pod Ready status
+  shell: kubectl get pods -l app=laravel -o jsonpath='{.items[0].status.containerStatuses[0].ready}'
+  register: status
+  until: status.stdout_lines[0] == "true"
+  delay: 60
+  retries: 7
+

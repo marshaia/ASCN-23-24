@@ -1,0 +1,8 @@
+- name: Create dashboard config file
+  template:
+    src: dashboard_config.json
+    dest: dashboards/dashboard_config.json
+
+- name: Create Dashboard
+  shell: "gcloud monitoring dashboards create --config-from-file=dashboards/dashboard_config.json"
+

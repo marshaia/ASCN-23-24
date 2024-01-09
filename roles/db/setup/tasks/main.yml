@@ -1,0 +1,22 @@
+---
+- name: Mysql pvc
+  kubernetes.core.k8s:
+    state: present
+    template: mysql-pvc.yml
+
+- name: Mysql service
+  kubernetes.core.k8s:
+    state: present
+    template: mysql-service.yml
+
+- name: Mysql deployment
+  kubernetes.core.k8s:
+    state: present
+    template: mysql-deployment.yml
+
+- name: Get Pod Status
+  shell: kubectl get pods -l app=mysql -o jsonpath='{.items[0].status.phase}'
+  register: db_status
+  until: db_status.stdout_lines[0] == "Running"
+  delay: 60
+  retries: 10

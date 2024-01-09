@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config
+  namespace: "{{ gcp_namespace }}"
+data:
+  # property-like keys; each key maps to a simple value
+  db_allow_empty_password: "{{ db_empty_password }}"
+  database_name: "{{ db_name }}"
+  database_user: "{{ db_user }}"

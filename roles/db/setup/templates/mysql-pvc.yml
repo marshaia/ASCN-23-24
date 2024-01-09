@@ -1,0 +1,14 @@
+---
+# Persistent Volume Claim for MySQL pod
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: "{{ db_pvc }}"
+  namespace: "{{ gcp_namespace }}"
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 30Gi
+  storageClassName: standard-rwo

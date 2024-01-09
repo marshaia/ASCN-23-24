@@ -1,0 +1,12 @@
+- name: Enable Laravel HPA
+  kubernetes.core.k8s:
+    state: present
+    template: laravel-autoscale.yml
+
+
+- name: Get HPA status
+  shell: kubectl get hpa laravel-autoscale -o jsonpath='{.status.conditions[0].status}'
+  register: hpa_status
+  until: hpa_status.stdout_lines[0] is defined and hpa_status.stdout_lines[0] == 'True'
+  delay: 60
+  retries: 10
